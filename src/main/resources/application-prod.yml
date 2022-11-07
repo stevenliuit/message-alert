@@ -1,0 +1,12 @@
+server:
+  port: 8099
+
+logging:
+  file:
+    path: logs
+  config: classpath:logback-spring.xml
+
+springfox:
+  documentation:
+    swagger-ui:
+      enabled: false
