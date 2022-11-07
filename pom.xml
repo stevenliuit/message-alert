@@ -12,12 +12,23 @@
 	<version>0.0.1</version>
 	<name>message-alert</name>
 	<description>message alert</description>
+	
 	<properties>
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
 		<maven.compiler.compilerVersion>1.8</maven.compiler.compilerVersion>
 		<encoding>UTF-8</encoding>
+		<springfox.version>3.0.0</springfox.version>
+		<commons.io.version>2.8.0</commons.io.version>
+		<commons.lang3.version>3.8.1</commons.lang3.version>
+		<commons.fileupload.version>1.4</commons.fileupload.version>
+		<lombok.version>1.18.24</lombok.version>
+		<okhttp3.version>3.14.9</okhttp3.version>
+		<fastjson2.version>2.0.18</fastjson2.version>
+		<lombok.version>1.18.24</lombok.version>
+		<lombok.version>1.18.24</lombok.version>
 	</properties>
+	
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -34,7 +45,7 @@
 		<dependency>
 			<groupId>io.springfox</groupId>
 			<artifactId>springfox-boot-starter</artifactId>
-			<version>3.0.0</version>
+			<version>${springfox.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -43,39 +54,44 @@
 		<dependency>
 			<groupId>commons-io</groupId>
 			<artifactId>commons-io</artifactId>
-			<version>2.8.0</version>
+			<version>${commons.io.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.apache.commons</groupId>
 			<artifactId>commons-lang3</artifactId>
-			<version>3.8.1</version>
+			<version>${commons.lang3.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>commons-fileupload</groupId>
 			<artifactId>commons-fileupload</artifactId>
-			<version>1.4</version>
+			<version>${commons.fileupload.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
-			<version>1.18.24</version>
+			<version>${lombok.version}</version>
 			<scope>provided</scope>
 		</dependency>
 		<dependency>
 			<groupId>com.squareup.okhttp3</groupId>
 			<artifactId>okhttp</artifactId>
-			<version>3.14.9</version>
+			<version>${okhttp3.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>com.squareup.okhttp3</groupId>
 			<artifactId>logging-interceptor</artifactId>
-			<version>3.14.9</version>
+			<version>${okhttp3.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>com.alibaba.fastjson2</groupId>
 			<artifactId>fastjson2</artifactId>
-			<version>2.0.18</version>
+			<version>${fastjson2.version}</version>
 		</dependency>
+ 		<!--整合springboot与junit测试依赖,此包自带junit包，无需重复导junit的包-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+        </dependency>
 	</dependencies>
 
 	<build>
@@ -83,14 +99,6 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
-				<configuration>
-					<excludes>
-						<exclude>
-							<groupId>org.projectlombok</groupId>
-							<artifactId>lombok</artifactId>
-						</exclude>
-					</excludes>
-				</configuration>
 			</plugin>
 		</plugins>
 	</build>
