@@ -21,16 +21,11 @@ public class TestController {
     @Autowired
     private TestService testService;
 
-    /**
-     * 业主数据录入
-     *
-     * @param apartmentCustomerEntity
-     * @return
-     */
-    @ApiOperation(value = "业主数据录入")
-    @RequestMapping(value = "addInfo", method = RequestMethod.POST)
+  
+    @ApiOperation(value = "测试接口入")
+    @RequestMapping(value = "tteesstt", method = RequestMethod.POST)
     @ResponseBody
-    public JsonResponse addUserInfo(@RequestBody(required = false) String abc) {
+    public JsonResponse tteeSstt(@RequestBody(required = false) String abc) {
 
         JsonResponse jsonResponse = new JsonResponse();
         jsonResponse.setData(testService);
