@@ -5,6 +5,7 @@ import com.alibaba.fastjson2.JSONObject;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.message.alert.utils.GitEmoji;
 import com.message.alert.utils.OkHttpUtils;
+import static com.message.alert.utils.MapUtils.map;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
